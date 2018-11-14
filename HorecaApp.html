@@ -1,0 +1,42 @@
+		<script>
+			var question = true;
+			var order
+			var qty
+
+			while (question == true){
+				
+				order = prompt ("Wat wilt u bestellen? bier, wijn, fris of stop");
+				
+				if (order == "stop") {
+					question = false;
+				}
+				else if (order == "bier") {
+					qtyBier = prompt ("Hoeveel bier wilt u bestellen?")
+				}
+
+				else if (order == "wijn") {
+					qtyWijn = prompt ("Hoeveel wijn wilt u bestellen?")
+				}
+				else if (order == "fris") {
+					qtyFris = prompt ("Hoeveel fris wilt u bestellen?")
+				}
+				else
+					{ alert("kan niet")}
+			}
+
+			const prijsBier = 2.00
+			const prijsWijn = 2.00
+			const prijsFris = 2.00
+
+			totaalBier = (prijsBier * qtyBier);
+			totaalWijn = (prijsWijn * qtyWijn);
+			totaalFris = (prijsFris * qtyFris);
+
+			totaalBestelling = (totaalBier + totaalWijn + totaalFris)
+
+			document.write('U heeft ' + qtyBier + ' bier ' + qtyWijn + ' wijn en ' + qtyFris + ' fris besteld.' + "<br>");
+			document.write('De kosten voor het bier is ' + totaalBier + ' euro' + "<br>")
+			document.write('De kosten voor het wijn is ' + totaalWijn + ' euro' + "<br>")
+			document.write('De kosten voor het fris is ' + totaalFris + ' euro' + "<br>")
+			document.write('Dus alles bij elkaar is ' + totaalBier + ' + ' + totaalFris + ' + ' + totaalWijn + ' = ' + totaalBestelling + ' euro' )
+		</script> 
